@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RetroTape</title><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="app">
+<header><p>STEREO CASSETTE DECK</p><h1>RetroTape RX-86</h1><span id="status">SEM FITA</span></header>
+<section class="deck">
+<div class="display"><span id="track">-- ESCOLHA UMA FITA --</span><span id="time">00:00 / 00:00</span></div>
+<div class="window">
+<div id="empty">CASSETTE DOOR<br><b>OPEN</b></div>
+<div id="cassette" class="cassette hidden"><div id="label">CASSETTE</div><div class="reels"><i></i><em>TYPE I</em><i></i></div><small id="side">SIDE A · NORMAL POSITION</small></div>
+</div>
+<div class="vu"><label>L <meter id="vuL" min="0" max="100" value="4"></meter></label><label>R <meter id="vuR" min="0" max="100" value="4"></meter></label></div>
+<div class="controls">
+<button data-a="rew">⏪<small>REW</small></button><button data-a="prev">⏮<small>PREV</small></button><button data-a="play" class="play">▶<small>PLAY</small></button><button data-a="pause">⏸<small>PAUSE</small></button><button data-a="stop">■<small>STOP</small></button><button data-a="next">⏭<small>NEXT</small></button><button data-a="eject">⏏<small>EJECT</small></button>
+</div>
+<div class="lower"><button id="flip">↻ VIRAR FITA</button><label>VOL <input id="volume" type="range" min="0" max="1" step=".01" value=".75"></label></div>
+</section>
+<aside><h2>Biblioteca de Fitas</h2><p>Escolha uma fita para inserir.</p><div id="library"></div><h3>FAIXAS</h3><ol id="playlist"><li>Nenhuma fita inserida</li></ol></aside>
+<footer>RetroTape · experiência retrô no navegador</footer>
+</main>
+<audio id="audio" preload="metadata"></audio>
+<script src="app.js"></script>
+</body></html>
