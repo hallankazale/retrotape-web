@@ -1,27 +1,13 @@
-<!doctype html>
-<html lang="pt-BR">
-<head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>RetroTape</title><link rel="stylesheet" href="styles.css">
-</head>
-<body>
-<main class="app">
-<header><p>STEREO CASSETTE DECK</p><h1>RetroTape RX-86</h1><span id="status">SEM FITA</span></header>
-<section class="deck">
-<div class="display"><span id="track">-- ESCOLHA UMA FITA --</span><span id="time">00:00 / 00:00</span></div>
-<div class="window">
-<div id="empty">CASSETTE DOOR<br><b>OPEN</b></div>
-<div id="cassette" class="cassette hidden"><div id="label">CASSETTE</div><div class="reels"><i></i><em>TYPE I</em><i></i></div><small id="side">SIDE A · NORMAL POSITION</small></div>
-</div>
-<div class="vu"><label>L <meter id="vuL" min="0" max="100" value="4"></meter></label><label>R <meter id="vuR" min="0" max="100" value="4"></meter></label></div>
-<div class="controls">
-<button data-a="rew">⏪<small>REW</small></button><button data-a="prev">⏮<small>PREV</small></button><button data-a="play" class="play">▶<small>PLAY</small></button><button data-a="pause">⏸<small>PAUSE</small></button><button data-a="stop">■<small>STOP</small></button><button data-a="next">⏭<small>NEXT</small></button><button data-a="eject">⏏<small>EJECT</small></button>
-</div>
-<div class="lower"><button id="flip">↻ VIRAR FITA</button><label>VOL <input id="volume" type="range" min="0" max="1" step=".01" value=".75"></label></div>
-</section>
-<aside><h2>Biblioteca de Fitas</h2><p>Escolha uma fita para inserir.</p><div id="library"></div><h3>FAIXAS</h3><ol id="playlist"><li>Nenhuma fita inserida</li></ol></aside>
-<footer>RetroTape · experiência retrô no navegador</footer>
-</main>
-<audio id="audio" preload="metadata"></audio>
-<script src="app.js"></script>
-</body></html>
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>RetroTape Web</title><link rel="stylesheet" href="styles.css"></head><body>
+<header class="top"><div class="brand">RetroTape <b>WEB</b></div><div class="motto">MÚSICA É UMA VIAGEM<br>NO TEMPO</div><nav><b>TOCA-FITAS</b><span>BIBLIOTECA</span><span>SOBRE</span></nav><i>Good Music<br>Never Dies</i></header>
+<main>
+<section class="deck"><div class="decktitle"><b>RETROTAPE</b><span>STEREO CASSETTE DECK&nbsp;&nbsp; RT-1986</span><em>HI-FI STEREO</em></div>
+<div class="machine">
+<div class="leftstrip"><label>POWER<br><button id="power">●</button><small>ON</small></label><label>PHONES<div class="jack"></div></label></div>
+<div class="transport"><div class="door"><div id="empty">CASSETTE DOOR<br><b>OPEN</b></div><div id="cassette" class="cassette hidden"><div id="label">THE CLASSICS</div><div class="tapeinner"><span class="reel"></span><div class="tapeview"></div><span class="reel"></span></div><small id="side">SIDE A · NORMAL POSITION</small></div></div><div class="autostop">AUTO STOP SYSTEM</div>
+<div class="keys"><button data-a="rew">◀◀<small>REW</small></button><button data-a="play">▶<small>PLAY</small></button><button data-a="next">▶▶<small>FF</small></button><button data-a="stop">■<small>STOP</small></button><button data-a="pause">Ⅱ<small>PAUSE</small></button><button data-a="eject">▲<small>EJECT</small></button></div></div>
+<div class="rightpanel"><div class="meters"><div class="meter"><b>VU</b><div class="scale">−20&nbsp;&nbsp;10&nbsp;&nbsp;5&nbsp;&nbsp;3&nbsp;&nbsp;1&nbsp;&nbsp;0&nbsp;&nbsp;+3</div><i id="needleL"></i><small>LEFT</small></div><div class="meter"><b>VU</b><div class="scale">−20&nbsp;&nbsp;10&nbsp;&nbsp;5&nbsp;&nbsp;3&nbsp;&nbsp;1&nbsp;&nbsp;0&nbsp;&nbsp;+3</div><i id="needleR"></i><small>RIGHT</small></div></div>
+<div class="hardware"><div><small>TAPE COUNTER</small><strong id="counter">000</strong></div><div><small>DOLBY NR</small><button id="dolby">◐</button><small>○ ON&nbsp;&nbsp; ○ OFF</small></div><div><small>TAPE SELECT</small><span>NORMAL<br>CrO2<br>METAL</span></div><div class="volume"><small>VOLUME</small><div class="knob"></div><input id="volume" type="range" min="0" max="1" step=".01" value=".75"></div></div></div></div></section>
+<section class="library"><h2>BIBLIOTECA DE FITAS</h2><div id="library"></div></section>
+<section class="now"><div class="mini">▣</div><div><b id="nowTape">Nenhuma fita</b><span id="track">Escolha uma fita</span></div><div class="progress"><input id="seek" type="range" min="0" max="30" value="0"><small id="time">00:00 / 00:00</small></div><button id="flip">LADO A</button><span>↝ &nbsp; ↻</span></section>
+</main><footer>FEITO COM PAIXÃO PARA OS AMANTES DA MÚSICA</footer><script src="app.js"></script></body></html>
